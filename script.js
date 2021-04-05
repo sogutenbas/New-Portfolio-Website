@@ -1,13 +1,13 @@
 // Portfolio Item Filter
-const filterContainer = document.querySelector(".portfolio-filter"),
-    filterBtns = filterContainer.children,
-    totalFilterBtn = filterBtns.length,
-    portfolioItems = document.querySelectorAll(".portfolio-filter "),
-    totalPortfolioItem = portfolioItems.length;
+const filterContainer = document.querySelector(".portfolio-filter");
+const filterBtns = filterContainer.children;
+   const totalFilterBtn = filterBtns.length;
+    const portfolioItems = document.querySelectorAll(".portfolio-filter ");
+    const totalPortfolioItem = portfolioItems.length;
 
 for (let i = 0; i < totalFilterBtn; i++) {
     filterBtns[i].addEventListener("click", function () {
-        filterContainer.querySelector("active").classList.remove("active");
+        filterContainer.querySelector(".active").classList.remove("active");
         this.classList.add("active");
 
         const filterValue = this.getAttribute("data-filter");
@@ -33,10 +33,10 @@ const lightbox = document.querySelector(".lightbox"),
     lightboxImg = lightbox.querySelector(".lightbox-img"),
     lightboxClose = lightbox.querySelector(".lightbox-close"),
     lightboxText = lightbox.querySelector(".caption-text"),
-    lightboxCounter = lightbox.querySelector("caption-counter");
+    lightboxCounter = lightbox.querySelector(".caption-counter");
 let itemIndex = 0;
 
-for (let i = o; i < totalPortfolioItem; i++) {
+for (let i = 0; i<totalPortfolioItem; i++) {
     portfolioItems[i].addEventListener("click", function () {
         itemIndex = i;
         changeItem();
